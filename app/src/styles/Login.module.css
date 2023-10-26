@@ -1,0 +1,9 @@
+.card {
+  border-radius: 8px;
+  border: 1px solid black;
+  width: 35rem;
+}
+
+.link {
+  color: royalblue !important;
+}

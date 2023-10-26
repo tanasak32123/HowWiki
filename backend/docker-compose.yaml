@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: .
+    environment:
+      - PORT=3000
+      - DATABASE_HOST=db
+      - DATABASE_PORT=5432
+      - DATABASE_USERNAME=postgres
+      - DATABASE_PASSWORD=boom25442544
+      - DATABASE_NAME=cloud-final-project
+      - USER_POOL_ID=ap-southeast-1_LNhz2fwfg
+      - TOKEN_USE=access
+      - CLIENT_ID=3r4t67lkqeak704n9jarm99age
+      - NODE_ENV=production
+    ports:
+      - "3000:3000"
+    depends_on:
+      - "db"
+  db:
+    image: "postgres"
+    container_name: db
+    restart: always
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "boom25442544"
+      POSTGRES_DB: "cloud-final-project"
+    ports:
+      - '5432:5432'
+    volumes: 
+      - db:/var/lib/postgresql/data
+
+volumes:
+  db:
+    driver: local

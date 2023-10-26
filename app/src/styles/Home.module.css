@@ -1,0 +1,24 @@
+.catgif {
+  height: 25rem;
+  width: auto;
+}
+
+.container {
+  width: 53rem;
+}
+
+.card_text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.img_card {
+  height: 170px;
+}
+
+a {
+  color: white !important;
+}
